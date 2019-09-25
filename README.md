@@ -1,2 +1,2 @@
-# tweet-parser
-PHP Tweet parser
+# Chirp
+Twitter tools for PHP

@@ -1,0 +1,29 @@
+{
+    "name": "decodelabs/chirp",
+    "description": "Twitter tools",
+    "type": "library",
+    "keywords": ["tweet", "twitter", "markup", "html"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Wright",
+            "email": "tom@inflatablecookie.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/polyfill-mbstring": "^1.7",
+
+        "decodelabs/glitch": "<2"
+    },
+    "autoload": {
+        "psr-4": {
+            "DecodeLabs\\Chirp\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.x-dev"
+        }
+    }
+}
