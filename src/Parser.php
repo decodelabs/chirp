@@ -62,7 +62,7 @@ class Parser
 
             $href = ((!$protocol || strtolower($protocol) === 'www.') ? 'https://'.$url : $url);
             return $before.$this->wrapUrl($href, 'url', $url);
-        }, $output);
+        }, $output) ?? $output;
 
         // Hashtags
         $output = preg_replace_callback(self::HASHTAG, function ($matches) {
@@ -71,7 +71,7 @@ class Parser
             $url = self::BASE_URL.self::SEARCH_PATH.$matches[3];
             $replacement .= $this->wrapUrl($url, 'hashtag', $element);
             return $replacement;
-        }, $output);
+        }, $output) ?? $output;
 
         // Usernames
         $output = preg_replace_callback(self::USERNAME_LIST, function ($matches) {
@@ -94,7 +94,7 @@ class Parser
             }
 
             return $before.$this->wrapUrl($url, $class, $at.$element).$suffix.$after;
-        }, $output);
+        }, $output) ?? $output;
 
         return $output;
     }
