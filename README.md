@@ -1,5 +1,6 @@
 # Chirp
 
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/decodelabs/chirp?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
 [![Latest Version](https://img.shields.io/packagist/v/decodelabs/chirp.svg?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
 [![Total Downloads](https://img.shields.io/packagist/dt/decodelabs/chirp.svg?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
 [![Build Status](https://img.shields.io/travis/decodelabs/chirp/develop.svg?style=flat-square)](https://travis-ci.org/decodelabs/chirp)
