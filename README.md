@@ -26,7 +26,7 @@ Parse a tweet into HTML:
 use DecodeLabs\Chirp\Parser;
 
 $parser = new Parser();
-echo $parser->parser($myTweet);
+echo $parser->parse($myTweet);
 ```
 
 
