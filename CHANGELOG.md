@@ -1,3 +1,6 @@
+* Applied full PSR12 standards
+* Added PSR12 check to Travis build
+
 ## v0.5.2 (2020-10-05)
 * Updated readme
 * Updated PHPStan
