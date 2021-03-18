@@ -3,7 +3,7 @@
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/decodelabs/chirp?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
 [![Latest Version](https://img.shields.io/packagist/v/decodelabs/chirp.svg?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
 [![Total Downloads](https://img.shields.io/packagist/dt/decodelabs/chirp.svg?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
-[![Build Status](https://img.shields.io/travis/com/decodelabs/chirp/master.svg?style=flat-square)](https://travis-ci.org/decodelabs/chirp)
+[![Build Status](https://img.shields.io/travis/com/decodelabs/chirp/main.svg?style=flat-square)](https://travis-ci.com/decodelabs/chirp)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-44CC11.svg?longCache=true&style=flat-square)](https://github.com/phpstan/phpstan)
 [![License](https://img.shields.io/packagist/l/decodelabs/chirp?style=flat-square)](https://packagist.org/packages/decodelabs/chirp)
 
