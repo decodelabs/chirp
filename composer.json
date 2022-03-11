@@ -16,11 +16,14 @@
         "phpstan/phpstan": "^1",
         "phpstan/extension-installer": "^1.0",
         "decodelabs/phpstan-decodelabs": "^0.5",
-        "symplify/easy-coding-standard": "^10"
+        "symplify/easy-coding-standard": "^10",
+
+        "decodelabs/metamorph": "0.1"
     },
     "autoload": {
         "psr-4": {
-            "DecodeLabs\\Chirp\\": "src/"
+            "DecodeLabs\\Chirp\\": "src/Chirp",
+            "DecodeLabs\\Metamorph\\Handler\\": "src/Metamorph"
         }
     },
     "extra": {
