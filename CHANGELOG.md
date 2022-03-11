@@ -1,3 +1,6 @@
+## v0.6.2 (2022-03-11)
+* Added Metamorph Handler
+
 ## v0.6.1 (2022-03-09)
 * Transitioned from Travis to GHA
 * Updated PHPStan and ECS dependencies
