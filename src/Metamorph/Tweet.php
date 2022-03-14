@@ -11,7 +11,6 @@ namespace DecodeLabs\Metamorph\Handler;
 
 use DecodeLabs\Chirp\Parser;
 use DecodeLabs\Metamorph\Handler;
-use DecodeLabs\Tagged\Buffer;
 
 class Tweet implements Handler
 {
@@ -28,6 +27,6 @@ class Tweet implements Handler
             $setup($parser);
         }
 
-        return new Buffer($parser->parse($content));
+        return $parser->parse($content);
     }
 }

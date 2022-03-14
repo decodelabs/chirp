@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace DecodeLabs\Chirp;
 
+use DecodeLabs\Tagged\Buffer;
+use DecodeLabs\Tagged\Element;
+use DecodeLabs\Tagged\Markup;
+
 class Parser
 {
     public const AT_SIGNS = '[@＠]';
@@ -46,18 +50,42 @@ class Parser
     /**
      * Convert plaintext tweet to HTML
      */
-    public function parse(?string $text): string
+    public function parse(?string $text): ?Markup
     {
         if (empty($text)) {
-            return '';
+            return null;
         }
 
-        $output = htmlspecialchars($text, \ENT_QUOTES, 'UTF-8', false);
+        $text = $this->esc($text);
 
         // Urls
-        $output = preg_replace_callback(self::URL_ALL, function ($matches) {
+        $text = $this->processUrls($text);
+
+        // Hashtags
+        $text = $this->processHashTags($text);
+
+        // Usernames
+        $text = $this->processUsernames($text);
+
+        return new Buffer($text);
+    }
+
+    /**
+     * Escape HTML
+     */
+    protected function esc(string $text): string
+    {
+        return htmlspecialchars($text, \ENT_QUOTES, 'UTF-8', false);
+    }
+
+    /**
+     * Process URLs
+     */
+    protected function processUrls(string $text): string
+    {
+        return preg_replace_callback(self::URL_ALL, function ($matches) {
             list($all, $before, $url, $protocol, $domain) = array_pad($matches, 7, '');
-            $url = htmlspecialchars($url, \ENT_QUOTES, 'UTF-8', false);
+            $url = $this->esc($url);
 
             if (!$protocol && !preg_match(self::URL_TLD, $domain)) {
                 return $all;
@@ -65,18 +93,30 @@ class Parser
 
             $href = (!$protocol || strtolower($protocol) === 'www.' ? 'https://' . $url : $url);
             return $before . $this->wrapUrl($href, 'url', $url);
-        }, $output) ?? $output;
+        }, $text) ?? $text;
+    }
 
-        // Hashtags
-        $output = preg_replace_callback(self::HASHTAG, function ($matches) {
+
+    /**
+     * Process hash tags
+     */
+    protected function processHashTags(string $text): string
+    {
+        return preg_replace_callback(self::HASHTAG, function ($matches) {
             $replacement = $matches[1];
             $element = $matches[2] . $matches[3];
             $url = self::BASE_URL . self::SEARCH_PATH . $matches[3];
             return $replacement . $this->wrapUrl($url, 'hashtag', $element);
-        }, $output) ?? $output;
+        }, $text) ?? $text;
+    }
 
-        // Usernames
-        $output = preg_replace_callback(self::USERNAME_LIST, function ($matches) {
+
+    /**
+     * Process usernames
+     */
+    protected function processUsernames(string $text): string
+    {
+        return preg_replace_callback(self::USERNAME_LIST, function ($matches) {
             list($all, $before, $at, $username, $listname, $after) = array_pad($matches, 6, '');
 
             if (!empty($after)) {
@@ -96,26 +136,27 @@ class Parser
             }
 
             return $before . $this->wrapUrl($url, $class, $at . $element) . $suffix . $after;
-        }, $output) ?? $output;
-
-        return $output;
+        }, $text) ?? $text;
     }
+
 
     /**
      * Generate a link tag for URL
      */
-    protected function wrapUrl(string $url, ?string $class, string $content): string
-    {
-        $output = '<a';
+    protected function wrapUrl(
+        string $url,
+        ?string $class,
+        string $content
+    ): Element {
+        $output = Element::create('a', $content, [
+            'href' => $url,
+            'rel' => 'external nofollow',
+            'target' => '_blank'
+        ]);
 
         if ($class !== null) {
-            $output .= ' class="' . $class . '"';
+            $output->addClass($class);
         }
-
-        $output .= ' href="' . $url . '"';
-        $output .= ' rel="external nofollow"';
-        $output .= ' target="_blank"';
-        $output .= '>' . $content . '</a>';
 
         return $output;
     }

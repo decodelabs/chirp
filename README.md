@@ -36,6 +36,21 @@ $parser = new Parser();
 echo $parser->parse($myTweet);
 ```
 
+### Metamorph
+
+Chirp also provides a [Metamorph](https://github.com/decodelabs/metamorph/) Handler so that it can be used via its simplified interface:
+
+```php
+use DecodeLabs\Metamorph;
+
+echo Metamorph::tweet($myTweet);
+```
+
+## Output
+
+The parsed HTML provided by Chirp is now wrapped in a <code>Markup</code> interface from the [Tagged](https://github.com/decodelabs/tagged/) library such that output is handled correctly in all rendering contexts.
+
+
 
 ## Licensing
 Chirp is licensed under the MIT License. See [LICENSE](./LICENSE) for the full license text.
