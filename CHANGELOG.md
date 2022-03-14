@@ -1,3 +1,6 @@
+## v0.7.0 (2022-03-14)
+* Use Tagged to wrap output in Markup
+
 ## v0.6.2 (2022-03-11)
 * Added Metamorph Handler
 
