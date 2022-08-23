@@ -1,3 +1,7 @@
+* Removed PHP7 compatibility
+* Updated ECS to v11
+* Updated PHPUnit to v9
+
 ## v0.7.0 (2022-03-14)
 * Use Tagged to wrap output in Markup
 
