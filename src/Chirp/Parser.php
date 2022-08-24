@@ -15,9 +15,9 @@ use DecodeLabs\Tagged\Markup;
 
 class Parser
 {
-    public const AT_SIGNS = '[@＠]';
+    public const AT_SIGNS = '[@＠]'; // @ignore-non-ascii
 
-    public const URL_PRE = '(?:[^-\\/"\':!=a-z0-9_@＠]|^|\\:)';
+    public const URL_PRE = '(?:[^-\\/"\':!=a-z0-9_@＠]|^|\\:)'; // @ignore-non-ascii
     public const URL_DOMAIN = '(?:[^\\p{P}\\p{Lo}\\s][\\.-](?=[^\\p{P}\\p{Lo}\\s])|[^\\p{P}\\p{Lo}\\s])+\\.[a-z]{2,}(?::[0-9]+)?';
     public const URL_TLD = '/\\.(?:com|net|org|gov|edu|uk)$/iu';
     public const URL_PATH = '(?:(?:\\([a-z0-9!\\*\';:=\\+\\$\\/%#\\[\\]\\-_,~]+\\))|@[a-z0-9!\\*\';:=\\+\\$\\/%#\\[\\]\\-_,~]+\\/|[\\.\\,]?(?:[a-z0-9!\\*\';:=\\+\\$\\/%#\\[\\]\\-_~]|,(?!\s)))';
@@ -37,11 +37,11 @@ class Parser
         ')' .
         ')/iux';
 
-    public const USERNAME_LIST = '/([^a-z0-9_\/]|^|RT:?)([@＠]+)([a-z0-9_]{1,20})(\/[a-z][-_a-z0-9\x80-\xFF]{0,24})?([@＠\xC0-\xD6\xD8-\xF6\xF8-\xFF]?)/iu';
-    public const USERNAME_MENTION = '/(^|[^a-z0-9_])[@＠]([a-z0-9_]{1,20})([@＠\xC0-\xD6\xD8-\xF6\xF8-\xFF]?)/iu';
-    public const USERNAME_REPLY = '/^(' . self::WHITESPACE . ')*[@＠]([a-zA-Z0-9_]{1,20})/';
+    public const USERNAME_LIST = '/([^a-z0-9_\/]|^|RT:?)([@＠]+)([a-z0-9_]{1,20})(\/[a-z][-_a-z0-9\x80-\xFF]{0,24})?([@＠\xC0-\xD6\xD8-\xF6\xF8-\xFF]?)/iu'; // @ignore-non-ascii
+    public const USERNAME_MENTION = '/(^|[^a-z0-9_])[@＠]([a-z0-9_]{1,20})([@＠\xC0-\xD6\xD8-\xF6\xF8-\xFF]?)/iu'; // @ignore-non-ascii
+    public const USERNAME_REPLY = '/^(' . self::WHITESPACE . ')*[@＠]([a-zA-Z0-9_]{1,20})/'; // @ignore-non-ascii
 
-    public const HASHTAG = '/(^|[^0-9A-Z&\/\?]+)([#＃]+)([0-9A-Z_]*[A-Z_]+[a-z0-9_üÀ-ÖØ-öø-ÿ]*)/iu';
+    public const HASHTAG = '/(^|[^0-9A-Z&\/\?]+)([#＃]+)([0-9A-Z_]*[A-Z_]+[a-z0-9_üÀ-ÖØ-öø-ÿ]*)/iu'; // @ignore-non-ascii
     public const WHITESPACE = '[\x09-\x0D\x20\x85\xA0]|\xe1\x9a\x80|\xe1\xa0\x8e|\xe2\x80[\x80-\x8a,\xa8,\xa9,\xaf\xdf]|\xe3\x80\x80';
 
     public const BASE_URL = 'https://twitter.com/';
