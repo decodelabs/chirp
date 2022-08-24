@@ -11,6 +11,7 @@ namespace DecodeLabs\Metamorph\Handler;
 
 use DecodeLabs\Chirp\Parser;
 use DecodeLabs\Metamorph\Handler;
+use Stringable;
 
 class Tweet implements Handler
 {
@@ -20,7 +21,7 @@ class Tweet implements Handler
     public function convert(
         string $content,
         ?callable $setup = null
-    ) {
+    ): string|Stringable|null {
         $parser = new Parser();
 
         if ($setup) {
