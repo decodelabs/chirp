@@ -20,7 +20,7 @@
         "symplify/easy-coding-standard": "^11",
 
         "decodelabs/phpstan-decodelabs": "^0.6",
-        "decodelabs/metamorph": "^0.4"
+        "decodelabs/metamorph": "^0.5"
     },
     "autoload": {
         "psr-4": {
