@@ -1,3 +1,4 @@
+* Updated composer check script
 * Updated CI environment
 
 ## v0.8.1 (2022-08-24)
