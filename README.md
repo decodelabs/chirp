@@ -7,7 +7,13 @@
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-44CC11.svg?longCache=true&style=flat)](https://github.com/phpstan/phpstan)
 [![License](https://img.shields.io/packagist/l/decodelabs/chirp?style=flat)](https://packagist.org/packages/decodelabs/chirp)
 
-Twitter tools for PHP
+### Twitter tools for PHP
+
+Chirp currently provides a hand-rolled tweet parser allowing you to render imported tweets on your site without hassle.
+
+_Get news and updates on the [DecodeLabs blog](https://blog.decodelabs.com)._
+
+---
 
 
 ## Installation
