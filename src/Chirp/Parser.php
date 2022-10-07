@@ -117,6 +117,10 @@ class Parser
     protected function processUsernames(string $text): string
     {
         return preg_replace_callback(self::USERNAME_LIST, function ($matches) {
+            /**
+             * @var string $before
+             * @var string $after
+             */
             list($all, $before, $at, $username, $listname, $after) = array_pad($matches, 6, '');
 
             if (!empty($after)) {
