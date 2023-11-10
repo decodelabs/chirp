@@ -2,14 +2,14 @@
     "name": "decodelabs/chirp",
     "description": "Tweet parser",
     "type": "library",
-    "keywords": ["tweet", "twitter", "markup", "html"],
+    "keywords": [ "tweet", "twitter", "markup", "html" ],
     "license": "MIT",
-    "authors": [{
-        "name": "Tom Wright",
-        "email": "tom@inflatablecookie.com"
-    }],
+    "authors": [ {
+            "name": "Tom Wright",
+            "email": "tom@inflatablecookie.com"
+        } ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
 
         "decodelabs/tagged": "^0.14"
     },
