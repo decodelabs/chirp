@@ -14,8 +14,8 @@
         "decodelabs/tagged": "^0.14"
     },
     "require-dev": {
-        "decodelabs/phpstan-decodelabs": "^0.6",
-        "decodelabs/metamorph": "^0.5"
+        "decodelabs/metamorph": "^0.5",
+        "decodelabs/phpstan-decodelabs": "^0.6"
     },
     "autoload": {
         "psr-4": {
