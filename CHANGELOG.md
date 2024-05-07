@@ -1,4 +1,5 @@
 * Made PHP8.1 minimum version
+* Updated Tagged dependency
 * Updated dependency list
 
 ## v0.8.2 (2023-09-26)
