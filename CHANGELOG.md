@@ -1,3 +1,8 @@
+## v0.8.3 (2024-05-07)
+* Made PHP8.1 minimum version
+* Updated Tagged dependency
+* Updated dependency list
+
 ## v0.8.2 (2023-09-26)
 * Fixed PHP8.1 testing
 * Updated composer check script

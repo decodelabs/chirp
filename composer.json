@@ -2,20 +2,20 @@
     "name": "decodelabs/chirp",
     "description": "Tweet parser",
     "type": "library",
-    "keywords": ["tweet", "twitter", "markup", "html"],
+    "keywords": [ "tweet", "twitter", "markup", "html" ],
     "license": "MIT",
-    "authors": [{
-        "name": "Tom Wright",
-        "email": "tom@inflatablecookie.com"
-    }],
+    "authors": [ {
+            "name": "Tom Wright",
+            "email": "tom@inflatablecookie.com"
+        } ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
 
-        "decodelabs/tagged": "^0.14"
+        "decodelabs/tagged": "^0.15"
     },
     "require-dev": {
-        "decodelabs/phpstan-decodelabs": "^0.6",
-        "decodelabs/metamorph": "^0.5"
+        "decodelabs/metamorph": "^0.5",
+        "decodelabs/phpstan-decodelabs": "^0.6"
     },
     "autoload": {
         "psr-4": {

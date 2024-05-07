@@ -50,8 +50,9 @@ class Parser
     /**
      * Convert plaintext tweet to HTML
      */
-    public function parse(?string $text): ?Markup
-    {
+    public function parse(
+        ?string $text
+    ): ?Markup {
         if (empty($text)) {
             return null;
         }
@@ -73,16 +74,18 @@ class Parser
     /**
      * Escape HTML
      */
-    protected function esc(string $text): string
-    {
+    protected function esc(
+        string $text
+    ): string {
         return htmlspecialchars($text, \ENT_QUOTES, 'UTF-8', false);
     }
 
     /**
      * Process URLs
      */
-    protected function processUrls(string $text): string
-    {
+    protected function processUrls(
+        string $text
+    ): string {
         return preg_replace_callback(self::URL_ALL, function ($matches) {
             list($all, $before, $url, $protocol, $domain) = array_pad($matches, 7, '');
             $url = $this->esc($url);
@@ -100,8 +103,9 @@ class Parser
     /**
      * Process hash tags
      */
-    protected function processHashTags(string $text): string
-    {
+    protected function processHashTags(
+        string $text
+    ): string {
         return preg_replace_callback(self::HASHTAG, function ($matches) {
             $replacement = $matches[1];
             $element = $matches[2] . $matches[3];
@@ -114,8 +118,9 @@ class Parser
     /**
      * Process usernames
      */
-    protected function processUsernames(string $text): string
-    {
+    protected function processUsernames(
+        string $text
+    ): string {
         return preg_replace_callback(self::USERNAME_LIST, function ($matches) {
             /**
              * @var string $before
