@@ -1,3 +1,4 @@
+## v0.8.3 (2024-05-07)
 * Made PHP8.1 minimum version
 * Updated Tagged dependency
 * Updated dependency list
