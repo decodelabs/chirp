@@ -1,3 +1,8 @@
+## v0.9.0 (2024-08-21)
+* Made parser consts protected
+* PascalCased consts
+* Updated BaseUrl to x.com
+
 ## v0.8.3 (2024-05-07)
 * Made PHP8.1 minimum version
 * Updated Tagged dependency
