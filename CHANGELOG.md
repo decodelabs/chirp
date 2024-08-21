@@ -1,3 +1,4 @@
+## v0.9.0 (2024-08-21)
 * Made parser consts protected
 * PascalCased consts
 * Updated BaseUrl to x.com
