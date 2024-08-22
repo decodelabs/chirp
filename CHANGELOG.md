@@ -1,3 +1,6 @@
+## v0.9.1 (2024-08-21)
+* Updated Metamorph dependency
+
 ## v0.9.0 (2024-08-21)
 * Made parser consts protected
 * PascalCased consts
