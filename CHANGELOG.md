@@ -1,3 +1,5 @@
+* Added PHP8.4 to CI workflow
+
 ## v0.9.1 (2024-08-21)
 * Updated Metamorph dependency
 
