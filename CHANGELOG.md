@@ -1,4 +1,10 @@
+## v0.10.0 (2025-02-17)
+* Upgraded PHPStan to v2
+* Updated dependencies
+* Tidied boolean logic
+* Fixed Exceptional syntax
 * Added PHP8.4 to CI workflow
+* Made PHP8.4 minimum version
 
 ## v0.9.1 (2024-08-21)
 * Updated Metamorph dependency
