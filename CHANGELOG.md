@@ -1,3 +1,6 @@
+## v0.10.1 (2025-03-25)
+* Upgraded Tagged dependency
+
 ## v0.10.0 (2025-02-17)
 * Upgraded PHPStan to v2
 * Updated dependencies
