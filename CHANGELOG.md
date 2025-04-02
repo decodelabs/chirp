@@ -1,3 +1,6 @@
+## v0.10.3 (2025-04-02)
+* Upgraded Tagged dependency
+
 ## v0.10.2 (2025-03-26)
 * Upgraded Tagged dependency
 
