@@ -11,8 +11,6 @@
 
 Chirp provides a hand-rolled tweet parser allowing you to render imported tweets on your site without hassle.
 
-_Get news and updates on the [DecodeLabs blog](https://blog.decodelabs.com)._
-
 ---
 
 
