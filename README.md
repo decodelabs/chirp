@@ -9,9 +9,7 @@
 
 ### Twitter tools for PHP
 
-Chirp currently provides a hand-rolled tweet parser allowing you to render imported tweets on your site without hassle.
-
-_Get news and updates on the [DecodeLabs blog](https://blog.decodelabs.com)._
+Chirp provides a hand-rolled tweet parser allowing you to render imported tweets on your site without hassle.
 
 ---
 
@@ -47,7 +45,7 @@ echo Metamorph::tweet($myTweet);
 
 ## Output
 
-The parsed HTML provided by Chirp is now wrapped in a <code>Markup</code> interface from the [Tagged](https://github.com/decodelabs/tagged/) library such that output is handled correctly in all rendering contexts.
+The parsed HTML provided by Chirp is now wrapped in a `Markup` interface from the [Tagged](https://github.com/decodelabs/tagged/) library such that output is handled correctly in all rendering contexts.
 
 
 
