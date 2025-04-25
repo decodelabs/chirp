@@ -13,7 +13,7 @@
     "require": {
         "php": "^8.4",
 
-        "decodelabs/tagged": "^0.19"
+        "decodelabs/tagged": "^0.20"
     },
     "require-dev": {
         "decodelabs/metamorph": "^0.7",
