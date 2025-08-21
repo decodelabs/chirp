@@ -15,9 +15,6 @@ use Stringable;
 
 class Tweet implements Handler
 {
-    /**
-     * Convert markdown to HTML
-     */
     public function convert(
         string $content,
         ?callable $setup = null

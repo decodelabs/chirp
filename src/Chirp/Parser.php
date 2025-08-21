@@ -45,9 +45,6 @@ class Parser
     protected const string BaseUrl = 'https://x.com/';
     protected const string SearchPath = 'search?q=%23';
 
-    /**
-     * Convert plaintext tweet to HTML
-     */
     public function parse(
         ?string $text
     ): ?Markup {
@@ -69,18 +66,12 @@ class Parser
         return new Buffer($text);
     }
 
-    /**
-     * Escape HTML
-     */
     protected function esc(
         string $text
     ): string {
         return htmlspecialchars($text, \ENT_QUOTES, 'UTF-8', false);
     }
 
-    /**
-     * Process URLs
-     */
     protected function processUrls(
         string $text
     ): string {
@@ -113,9 +104,6 @@ class Parser
     }
 
 
-    /**
-     * Process hash tags
-     */
     protected function processHashTags(
         string $text
     ): string {
@@ -133,9 +121,6 @@ class Parser
     }
 
 
-    /**
-     * Process usernames
-     */
     protected function processUsernames(
         string $text
     ): string {
@@ -169,9 +154,6 @@ class Parser
     }
 
 
-    /**
-     * Generate a link tag for URL
-     */
     protected function wrapUrl(
         string $url,
         ?string $class,
