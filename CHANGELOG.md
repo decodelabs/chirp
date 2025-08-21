@@ -5,9 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+--
+
+---
+
+### [v0.10.5](https://github.com/decodelabs/chirp/commits/v0.10.5) - 21st August 2025
 
 - Upgraded Metamorph to v0.8
 - Upgraded Tagged to v0.21
+
+[Full list of changes](https://github.com/decodelabs/chirp/compare/v0.10.4...v0.10.5)
 
 ---
 
