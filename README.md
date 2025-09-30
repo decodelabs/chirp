@@ -16,7 +16,9 @@ Chirp provides a hand-rolled tweet parser allowing you to render imported tweets
 
 ## Installation
 
-Install the library via composer:
+This package requires PHP 8.4 or higher.
+
+Install via Composer:
 
 ```bash
 composer require decodelabs/chirp
