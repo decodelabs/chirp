@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package Chirp
- * @license http://opensource.org/licenses/MIT
+ * Chirp
+ * @license https://opensource.org/licenses/MIT
  */
 
 declare(strict_types=1);

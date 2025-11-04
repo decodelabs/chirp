@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package Metamorph
- * @license http://opensource.org/licenses/MIT
+ * Metamorph
+ * @license https://opensource.org/licenses/MIT
  */
 
 declare(strict_types=1);
